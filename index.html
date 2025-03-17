@@ -8,13 +8,23 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #e6f7e6; /* Light green background */
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            flex-direction: column;
+        }
+        .header {
+            width: 100%;
+            background-color: #2e8b57; /* Dark green */
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 24px;
+            font-weight: bold;
         }
         .container {
             text-align: center;
@@ -22,16 +32,20 @@
             background-color: #fff;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            border: 3px solid #2e8b57; /* Green border */
+            max-width: 500px;
         }
         h1 {
-            color: #333;
+            color: #2e8b57;
         }
         p {
-            color: #666;
+            color: #444;
         }
     </style>
 </head>
 <body>
+
+<div class="header">NZBaxters Home Portal</div>
 
 <div class="container">
     <h1>The Baxter's Home Portal</h1>
@@ -40,4 +54,3 @@
 
 </body>
 </html>
-
