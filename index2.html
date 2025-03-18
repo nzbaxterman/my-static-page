@@ -5,32 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Web Portal</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('background.jpg') repeat;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #2e8b57;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .dashboard {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 150px;
+            text-align: center;
+        }
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .button img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Personal Portal</h1>
+        Welcome to My Personal Portal
     </header>
-    <nav>
-        <ul>
-            <li><a href="#private-area">Family Hub</a></li>
-            <li><a href="#travel-gallery">Travel Memories</a></li>
-        </ul>
-    </nav>
     <main>
-        <section id="private-area">
-            <h2>Family Hub</h2>
+        <section>
+            <h2>Control Panels</h2>
             <div class="dashboard">
-                <div class="card">Home Management</div>
-                <div class="card">Security Cameras</div>
-                <div class="card">Home Theatre</div>
-            </div>
-        </section>
-        <section id="travel-gallery">
-            <h2>Travel Memories</h2>
-            <div class="gallery">
-                <img src="uk.jpg" alt="UK">
-                <img src="usa.jpg" alt="USA">
-                <img src="world.jpg" alt="Travels Around the World">
+                <a href="/home-management" class="button">
+                    <img src="home_icon.png" alt="Home Management">
+                    <p>Home Management</p>
+                </a>
+                <a href="/nodered-home" class="button">
+                    <img src="nodered_icon.png" alt="NodeRed Home">
+                    <p>NodeRed Home</p>
+                </a>
+                <a href="/farm-management" class="button">
+                    <img src="farm_icon.png" alt="Farm Management">
+                    <p>Farm Management</p>
+                </a>
+                <a href="/nodered-farm" class="button">
+                    <img src="nodered_icon.png" alt="NodeRed Farm">
+                    <p>NodeRed Farm</p>
+                </a>
+                <a href="/domoticz" class="button">
+                    <img src="domoticz_icon.png" alt="Domoticz">
+                    <p>Domoticz</p>
+                </a>
+                <a href="/kodi" class="button">
+                    <img src="kodi_icon.png" alt="Kodi Media Centre">
+                    <p>Kodi Media Centre</p>
+                </a>
             </div>
         </section>
     </main>
