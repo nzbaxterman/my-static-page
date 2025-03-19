@@ -94,7 +94,12 @@
     <script>
     function logout() {
         window.location.href = "https://portal.nzbaxters.com/cdn-cgi/access/logout?returnTo=https://nzbaxters.cloudflareaccess.com/cdn-cgi/access/logout&nocache=" + new Date().getTime();
-
-    }
+        document.cookie.split(";").forEach(function(c) {
+            document.cookie = c.trim().split("=")[0] + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.portal.nzbaxters.com";
+            });
+        setTimeout(() => {
+        window.location.href = "https://portal.nzbaxters.com/cdn-cgi/access/logout?returnTo=https://portal.nzbaxters.com";
+        }, 1000);
+        }
     </script>
 </html>
