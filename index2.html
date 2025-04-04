@@ -96,10 +96,19 @@
     <main>
         <section>
             <h2>Weather Information</h2>
-            <div class="weather-widgets">
-                <iframe src="https://www.metservice.com/public/widgets/local-wellington" width="300" height="250" style="border:none; overflow:hidden;"></iframe>
-                <iframe src="https://www.metservice.com/public/widgets/local-upper-moutere" width="300" height="250" style="border:none; overflow:hidden;"></iframe>
-            </div>
+            <div class="weather-widgets" style="display: flex; justify-content: flex-start; gap: 20px;">
+        <!-- Wellington Weather Widget -->
+        <a class="weatherwidget-io" href="https://forecast7.com/en/n41d34174d77/island-bay/" data-label_1="ISLAND BAY" data-label_2="WEATHER" data-theme="original">ISLAND BAY WEATHER</a>
+        <script>
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+        </script>
+
+        <!-- Upper Moutere Weather Widget -->
+        <a class="weatherwidget-io" href="https://forecast7.com/en/n41d25173d01/upper-moutere/" data-label_1="UPPER MOUTERE" data-label_2="WEATHER" data-theme="original">UPPER MOUTERE WEATHER</a>
+        <script>
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+        </script>
+    </div>
         </section>        
         <section>
             <h2>Control Panels</h2>
