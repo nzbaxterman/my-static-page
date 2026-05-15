@@ -110,6 +110,8 @@
       display: flex;
       gap: 28px;
       flex-wrap: wrap;
+      min-height: 0;
+      height: auto;
     }
 
     .weather-item {
@@ -119,6 +121,7 @@
       color: var(--green-muted);
       font-size: 12.5px;
       font-family: 'DM Mono', monospace;
+      text-decoration: none;
     }
 
     .weather-item svg {
@@ -126,6 +129,12 @@
       height: 14px;
       stroke: #5dcaa5;
       flex-shrink: 0;
+    }
+
+    /* hide any iframe/widget the weatherwidget script injects */
+    .weather-strip iframe,
+    .weather-strip > *:not(.weather-item) {
+      display: none !important;
     }
 
     /* ── Main content ── */
@@ -294,17 +303,14 @@
 
   <!-- Weather strip -->
   <div class="weather-strip">
-    <a class="weatherwidget-io weather-item" href="https://forecast7.com/en/n41d34174d77/island-bay/" data-label_1="ISLAND BAY" data-label_2="WEATHER" data-theme="original" style="color:var(--green-muted);text-decoration:none;">
+    <a class="weather-item" href="https://forecast7.com/en/n41d34174d77/island-bay/" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
-      Island Bay weather
+      Island Bay weather ↗
     </a>
-    <a class="weatherwidget-io weather-item" href="https://forecast7.com/en/n41d25173d01/upper-moutere/" data-label_1="UPPER MOUTERE" data-label_2="WEATHER" data-theme="original" style="color:var(--green-muted);text-decoration:none;">
+    <a class="weather-item" href="https://forecast7.com/en/n41d25173d01/upper-moutere/" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
-      Upper Moutere weather
+      Upper Moutere weather ↗
     </a>
-    <script>
-      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-    </script>
   </div>
 
   <!-- Main dashboard -->
